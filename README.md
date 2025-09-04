@@ -1,73 +1,44 @@
-# WebDev Showcase - Website Template Collection
+# ASH Engineering - Professional Engineering Solutions
 
-A comprehensive collection of professional, responsive website templates for various business needs.
+A modern, responsive website for ASH Engineering showcasing professional engineering services and expertise.
 
 ## 🚀 Features
 
-- **6 Complete Website Templates** - Restaurant, Portfolio, Business, E-commerce, Blog, and Landing Page
-- **Fully Responsive** - Works perfectly on all devices
-- **Modern Design** - Clean, professional layouts
-- **Easy to Customize** - Well-structured HTML, CSS, and JavaScript
-- **Cross-browser Compatible** - Tested on all major browsers
+- **Fully Responsive Design** - Works perfectly on all devices
+- **Modern UI/UX** - Clean, professional interface
+- **Fast Loading** - Optimized performance
+- **SEO Friendly** - Search engine optimized
+- **Cross-browser Compatible** - Works on all major browsers
 
-## 📁 Template Collection
+## 📁 Project Structure
 
-### 1. Restaurant & Cafe Template
-- Online menu display
-- Reservation system
-- Contact information
-- Gallery section
+- `INDEX.html` - Homepage
+- `about.html` - About page
+- `Products_List.html` - Products/Services page
+- `BLOG.html` - Blog section
+- `CONTACT_US.html` - Contact page
+- `404_NOT_FOUND.html` - Error page
 
-### 2. Creative Portfolio Template
-- Project showcase
-- About section
-- Skills display
-- Contact form
+## 🎨 Design Elements
 
-### 3. Corporate Business Template
-- Services overview
-- Team profiles
-- Company information
-- Client testimonials
+- **Color Scheme**: Blue (#0066cc) and Yellow (#ffcc00)
+- **Typography**: Segoe UI, Roboto, Helvetica Neue
+- **Icons**: Font Awesome 6.4.0
+- **Layout**: CSS Grid and Flexbox
 
-### 4. E-commerce Store Template
-- Product catalog
-- Shopping cart functionality
-- Product details pages
-- Checkout process
+## 🛠️ Technologies Used
 
-### 5. Personal Blog Template
-- Article listings
-- Individual post pages
-- Categories and tags
-- Author information
+- HTML5
+- CSS3 (Custom Properties, Grid, Flexbox)
+- JavaScript (ES6+)
+- Font Awesome Icons
+- Responsive Design
 
-### 6. Landing Page Template
-- Hero section
-- Features showcase
-- Call-to-action buttons
-- Contact form
+## 📱 Responsive Breakpoints
 
-## 🛠️ Installation & Usage
-
-1. **Clone or Download** this repository
-2. **Open** any template folder
-3. **Launch** `index.html` in your browser
-4. **Customize** the content, colors, and styling as needed
-
-## 🎨 Customization
-
-Each template includes:
-- **HTML files** - Structure and content
-- **CSS files** - Styling and layout
-- **JavaScript files** - Interactive functionality
-- **Assets** - Images and icons
-
-### Quick Customization Tips:
-- Edit HTML files to change content
-- Modify CSS variables for colors and fonts
-- Replace placeholder images with your own
-- Update contact information and links
+- **Desktop**: 1200px and above
+- **Tablet**: 768px - 1199px
+- **Mobile**: Below 768px
 
 ## 🌐 Browser Support
 
@@ -77,20 +48,14 @@ Each template includes:
 - Edge (latest)
 - Internet Explorer 11+
 
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1200px and above
-- **Tablet**: 768px - 1199px
-- **Mobile**: Below 768px
-
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is proprietary to ASH Engineering.
 
-## 📞 Support
+## 📞 Contact
 
-For questions or support, contact: contact@webdevshowcase.com
+For inquiries about ASH Engineering services, visit the contact page.
 
 ---
 
-**Made with ❤️ for the web development community**
+**ASH Engineering - Building Tomorrow's Solutions Today**
