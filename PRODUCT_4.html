@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Dyno Mill | Ash Engineering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #004d99;
+            --secondary: #ffcc00;
+            --secondary-dark: #e6b800;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+        }
+        
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            color: var(--gray);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+            text-align: center;
+            min-width: 150px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .btn:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-3px);
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+        
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo {
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .product-detail {
+            padding: 120px 0 80px;
+        }
+        
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: var(--light);
+        }
+        
+        .product-info h1 {
+            margin-bottom: 15px;
+        }
+        
+        .product-category {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .product-price {
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
+            color: var(--primary);
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .product-specs ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .product-specs li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1rem;
+        }
+        
+        .product-specs li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        .machine-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-about .logo {
+            color: var(--white);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-about p {
+            color: var(--gray);
+        }
+        
+        .footer-links h3, .footer-contact h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links ul, .footer-contact ul {
+            list-style: none;
+        }
+        
+        .footer-links li, .footer-contact li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a, .footer-contact a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover, .footer-contact a:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-contact li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+            font-size: 1.2rem;
+            background: #25d366;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        .fullscreen-modal{display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);cursor:pointer}
+        .fullscreen-image{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:95%;max-height:95%;object-fit:contain}
+        .close-btn{position:absolute;top:20px;right:30px;color:white;font-size:40px;cursor:pointer}
+        
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .product-container {
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .product-image {
+                height: 350px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .machine-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .product-detail {
+                padding: 100px 0 60px;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .product-image {
+                height: 250px;
+            }
+            
+            .navbar {
+                padding: 15px 0;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+            
+            .footer-content {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="INDEX.html" class="logo">
+                    <img src="logo.png" alt="Ash Engineering Logo" style="height: 55px;">
+                </a>
+                <div class="nav-links">
+                    <a href="INDEX.html">Home</a>
+                    <a href="ABOUT.html">About</a>
+                    <a href="Products_List.html">Products</a>
+                    <a href="BLOG.html">Blog</a>
+                    <a href="CONTACT_US.html">Contact</a>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-container">
+                <div class="product-image-container">
+                    <img src="Dyno Mill.png" alt="Dyno Mill" class="product-image">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Processing Equipment</div>
+                    <h1>Dyno Mill</h1>
+                    <p>Our Dyno Mill provides fine grinding and dispersion of pesticide formulations with consistent particle size distribution. Ideal for wet grinding applications with superior efficiency.</p>
+                    
+                    <div class="product-specs">
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>Fine grinding capability down to 1 micron</li>
+                            <li>Consistent particle size distribution</li>
+                            <li>Robust construction for continuous operation</li>
+                            <li>Water or solvent-based grinding</li>
+                            <li>Easy maintenance and cleaning</li>
+                            <li>Variable speed control</li>
+                            <li>Cooling system for temperature control</li>
+                            <li>Capacity: 10-200 L/hr</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="machine-actions">
+                        <a href="#" class="btn btn-primary" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>&nbsp; Get Quote
+                        </a>
+                        <a href="CONTACT_US.html" class="btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="INDEX.html" class="logo">
+                        <img src="black logo.png" alt="Ash Engineering Logo" style="height: 84px;">
+                    </a>
+                    <p>"Engineering solutions for a better Tomorrow."</p>
+                    <div class="social-links">
+                        <a href="#" onclick="openWhatsAppConsultation()"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="INDEX.html">Home</a></li>
+                        <li><a href="ABOUT.html">About</a></li>
+                        <li><a href="Products_List.html">Products</a></li>
+                        <li><a href="CONTACT_US.html">Contact</a></li>
+                        <li><a href="BLOG.html">Blog</a></li>
+                        <li><a href="FAQs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> <a href="#" onclick="openWhatsAppConsultation()">WhatsApp Us</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+919399086117">+91 9399086117</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+917000074395">+91 7000074395</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+919201663366">+91 9201663366</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info.ashengineering@gmail.com">info.ashengineering@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Block-B, Plot No. 14 Lakhanpuri, Indstrial Area Block Charama, Distt. Kanker(C.G.)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="copyright-container">
+                    <div class="cursor-follower"></div>
+                    <p>© 2024 Ash Engineering. All rights reserved.<br>
+                    <a href="https://yashbiware.github.io/YashBiware-Freelacing/index.html" target="_blank" style="color: var(--secondary); text-decoration: none; font-weight: 600;">
+                        Made with <span class="heart">❤️</span> by <span class="bucksss">Bucksss</span>
+                    </a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        function openWhatsApp() {
+            const message = "Hi! I'm interested in the Dyno Mill. Can you provide more details?";
+            const phoneNumber = "919399086117";
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+        
+        function openWhatsAppConsultation() {
+            const phoneNumber = "919399086117";
+            const message = "Hello Ash Engineering,\n\nI'm interested in a free consultation about your pesticide manufacturing solutions. Please provide more information.\n\n[Your Name]\n[Your Company]\n[Your Requirements]";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+        
+        function openFullscreen(s,a){const m=document.createElement('div');m.className='fullscreen-modal';m.innerHTML=`<span class="close-btn">&times;</span><img src="${s}" alt="${a}" class="fullscreen-image">`;document.body.appendChild(m);m.style.display='block';m.onclick=()=>document.body.removeChild(m)}
+        document.addEventListener('DOMContentLoaded',()=>{const i=document.querySelector('.product-image');if(i){i.style.cursor='pointer';i.onclick=()=>openFullscreen(i.src,i.alt)}});
+    </script>
+</body>
+</html>

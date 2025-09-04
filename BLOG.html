@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesticide Manufacturing Insights | Chemical Processing Equipment Blog | Ash Engineering</title>
+    <meta name="description" content="Expert insights on pesticide manufacturing machinery, chemical processing equipment guides, industry trends and technical knowledge for efficient production solutions.">
+    <meta name="keywords" content="pesticide manufacturing blog, chemical mixing vessel guide, bottle filling machine tips, ACM mill operation, processing equipment insights, packaging machinery articles">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Pesticide Manufacturing Insights | Ash Engineering Blog">
+    <meta property="og:description" content="Expert knowledge and technical guides for pesticide manufacturing excellence.">
+    <meta property="og:type" content="blog">
+    <link rel="canonical" href="https://ashengineering.com/blog">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #004d99;
+            --secondary: #ffcc00;
+            --secondary-dark: #e6b800;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.9) 0%, rgba(0, 102, 204, 0.8) 100%), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: var(--white);
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.2rem;
+        }
+        
+        .blog-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .blog-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .blog-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        
+        .blog-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .blog-card h3 {
+            color: var(--primary);
+            margin: 0 0 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-category {
+            background: var(--primary);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .blog-excerpt {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            text-align: center;
+        }
+        
+        .read-more:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-2px);
+        }
+        .full-article {
+            display: none;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 40px;
+            margin-top: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .full-article h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .full-article h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+        }
+        
+        .full-article img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        
+        .full-article h3 {
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-about .logo {
+            color: var(--white);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-about p {
+            color: var(--gray);
+        }
+        
+        .footer-links h3, .footer-contact h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links ul, .footer-contact ul {
+            list-style: none;
+        }
+        
+        .footer-links li, .footer-contact li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a, .footer-contact a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover, .footer-contact a:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-contact li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a { background: #25d366; }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Heartbeat Animation */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .heart {
+            display: inline-block;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            color: #ff6b6b;
+        }
+        
+        /* Bucksss Animation */
+        @keyframes bucksss-glow {
+            0% { 
+                text-shadow: 0 0 5px var(--secondary), 0 0 10px var(--secondary);
+                transform: scale(1);
+            }
+            50% { 
+                text-shadow: 0 0 10px var(--secondary), 0 0 20px var(--secondary), 0 0 30px var(--secondary);
+                transform: scale(1.05);
+            }
+            100% { 
+                text-shadow: 0 0 5px var(--secondary), 0 0 10px var(--secondary);
+                transform: scale(1);
+            }
+        }
+        
+        .bucksss {
+            display: inline-block;
+            animation: bucksss-glow 2s ease-in-out infinite;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .bucksss:hover {
+            animation-duration: 0.5s;
+            transform: scale(1.1) !important;
+        }
+        
+        /* Simple Footer Effects */
+        .copyright-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                font-size: 1.5rem;
+                background: none;
+                border: none;
+                color: var(--primary);
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="INDEX.html" class="logo">
+                    <img src="logo.png" alt="Ash Engineering Logo" style="height: 55px;">
+                </a>
+                <div class="nav-links">
+                    <a href="INDEX.html">Home</a>
+                    <a href="ABOUT.html">About</a>
+                    <a href="Products_List.html">Products</a>
+                    <a href="BLOG.html">Blog</a>
+                    <a href="CONTACT_US.html">Contact</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Engineering Insights</h1>
+            <p>Expert knowledge, industry trends, and technical guides for pesticide manufacturing excellence</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <h2>Latest Articles</h2>
+            <div class="blog-grid" id="article-list">
+            <!-- Article 1 Card -->
+            <article class="blog-card" data-article="article-1">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=70');"></div>
+                <div class="blog-content">
+                    <span class="blog-category">Processing Equipment</span>
+                    <h3><a href="https://www.google.com/search?q=Chemical+Mixing+Vessel+pesticide+formulation+consistency" target="_blank" style="color: var(--primary); text-decoration: none;">Chemical Mixing Vessel: Key to Consistent Formulations</a></h3>
+                    <div class="blog-meta">
+                        <span>December 15, 2024</span>
+                        <span>6 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Discover how our stainless steel chemical mixing vessels with variable speed control ensure precise temperature management and consistent pesticide formulations...</p>
+                    <div class="read-more">Continue Reading</div>
+                </div>
+            </article>
+
+            <!-- Article 2 Card -->
+            <article class="blog-card" data-article="article-2">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=70');"></div>
+                <div class="blog-content">
+                    <span class="blog-category">Packaging Equipment</span>
+                    <h3><a href="https://www.google.com/search?q=Automatic+Bottle+Filling+Machine+high+speed+precision+pesticide" target="_blank" style="color: var(--primary); text-decoration: none;">Automatic Bottle Filling Machine: High-Speed Precision</a></h3>
+                    <div class="blog-meta">
+                        <span>December 8, 2024</span>
+                        <span>8 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Learn how our automatic bottle filling machines deliver high-speed, precision liquid filling for various bottle sizes and viscosities in pesticide packaging...</p>
+                    <div class="read-more">Continue Reading</div>
+                </div>
+            </article>
+
+            <!-- Article 3 Card -->
+            <article class="blog-card" data-article="article-3">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=70');"></div>
+                <div class="blog-content">
+                    <span class="blog-category">Processing Equipment</span>
+                    <h3><a href="https://www.google.com/search?q=ACM+Air+Classifying+Mill+ultrafine+grinding+pesticide+powder" target="_blank" style="color: var(--primary); text-decoration: none;">ACM Air Classifying Mill: Ultrafine Grinding Excellence</a></h3>
+                    <div class="blog-meta">
+                        <span>November 28, 2024</span>
+                        <span>5 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Explore how our ACM (Air Classifying Mill) achieves ultrafine grinding with integrated particle separation for superior pesticide powder processing...</p>
+                    <div class="read-more">Continue Reading</div>
+                </div>
+            </article>
+
+            <!-- Article 4 Card -->
+            <article class="blog-card" data-article="article-4">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=70');"></div>
+                <div class="blog-content">
+                    <span class="blog-category">Complete Solutions</span>
+                    <h3><a href="https://www.google.com/search?q=Turnkey+Plant+Solutions+pesticide+manufacturing+complete+setup" target="_blank" style="color: var(--primary); text-decoration: none;">Turnkey Plant Solutions: From Processing to Packaging</a></h3>
+                    <div class="blog-meta">
+                        <span>November 15, 2024</span>
+                        <span>7 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Discover how Ash Engineering delivers complete manufacturing ecosystems with integrated processing and packaging solutions for pesticide production...</p>
+                    <div class="read-more">Continue Reading</div>
+                </div>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <main id="blog-container">
+        <!-- Full Articles (Hidden by default) -->
+        <!-- Article 1 Full -->
+        <article id="article-1" class="full-article">
+            <a href="#" class="back-button">← Back to all articles</a>
+            <h2><a href="https://www.google.com/search?q=Chemical+Mixing+Vessel+pesticide+formulation+consistency" target="_blank" style="color: var(--primary); text-decoration: none;">Chemical Mixing Vessel: Key to Consistent Formulations</a></h2>
+            <div class="blog-meta">
+                <span>December 15, 2024</span>
+                <span>6 min read</span>
+                <span class="blog-category">Processing Equipment</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=70" alt="Chemical mixing vessel in operation">
+            
+            <h3>Stainless Steel Construction Benefits</h3>
+            <p>Our chemical mixing vessels feature high-grade stainless steel construction that provides:</p>
+            <ul>
+                <li><strong>Corrosion Resistance</strong>: Withstands harsh chemical environments</li>
+                <li><strong>Easy Cleaning</strong>: Smooth surfaces prevent contamination</li>
+                <li><strong>Durability</strong>: Long-lasting performance in industrial settings</li>
+            </ul>
+
+            <h3>Variable Speed Control System</h3>
+            <p>Precise mixing control for different pesticide formulations:</p>
+            <ul>
+                <li><strong>0-100 RPM Range</strong>: Suitable for various viscosities</li>
+                <li><strong>Digital Controls</strong>: Accurate speed adjustment</li>
+                <li><strong>Multiple Impeller Options</strong>: Customized mixing patterns</li>
+            </ul>
+
+            <h3>Temperature Monitoring Features</h3>
+            <p>Advanced temperature control ensures optimal mixing conditions:</p>
+            <ul>
+                <li><strong>Jacketed Design</strong>: Uniform heating and cooling</li>
+                <li><strong>Real-time Monitoring</strong>: Continuous temperature feedback</li>
+                <li><strong>Safety Interlocks</strong>: Automatic protection systems</li>
+            </ul>
+        </article>
+
+        <!-- Article 2 Full -->
+        <article id="article-2" class="full-article">
+            <a href="#" class="back-button">← Back to all articles</a>
+            <h2><a href="https://www.google.com/search?q=Automatic+Bottle+Filling+Machine+pesticide+packaging+efficiency" target="_blank" style="color: var(--primary); text-decoration: none;">Automatic Bottle Filling Machine: Maximizing Packaging Efficiency</a></h2>
+            <div class="blog-meta">
+                <span>May 28, 2023</span>
+                <span>12 min read</span>
+                <span class="product-tag">Nova 4K Drone</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1579829366248-204fe8413f31" alt="Nova Drone in action">
+            
+            <h3>1. Orbit Shots</h3>
+            <p>Select a subject in the Nova app and set the orbit radius (50-500ft). The drone will automatically circle while keeping the subject centered.</p>
+            
+            <h3>2. Hyperlapse Mode</h3>
+            <p>Under Flight Modes, choose:</p>
+            <ul>
+                <li><strong>Time Interval</strong>: 2-10 seconds</li>
+                <li><strong>Duration</strong>: Up to 30 minutes</li>
+                <li>Export as 4K/30fps video</li>
+            </ul>
+
+            <h3>3. Intelligent Tracking</h3>
+            <p>Tap any moving subject to activate:</p>
+            <ul>
+                <li><strong>Follow Me</strong>: Maintains constant distance</li>
+                <li><strong>Lead Mode</strong>: Flies ahead of moving subjects</li>
+            </ul>
+        </article>
+
+        <!-- Article 3 Full -->
+        <article id="article-3" class="full-article">
+            <a href="#" class="back-button">← Back to all articles</a>
+            <h2><a href="https://www.google.com/search?q=ACM+Air+Classifying+Mill+pesticide+powder+processing" target="_blank" style="color: var(--primary); text-decoration: none;">ACM Air Classifying Mill: Advanced Powder Processing</a></h2>
+            <div class="blog-meta">
+                <span>May 15, 2023</span>
+                <span>6 min read</span>
+                <span class="product-tag">Pixel Pro Phone</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1603574670812-d24560880210" alt="Pixel Pro night photo example">
+            
+            <h3>1. Manual Night Mode</h3>
+            <p>Enable <strong>Pro Mode > Night+</strong> to adjust:</p>
+            <ul>
+                <li><strong>Exposure</strong>: 4-8 seconds (use tripod)</li>
+                <li><strong>ISO</strong>: Keep below 800 to reduce noise</li>
+            </ul>
+
+            <h3>2. Astrophotography Tips</h3>
+            <p>Under <strong>Special Modes</strong>:</p>
+            <ul>
+                <li>Point at the Milky Way for auto-detection</li>
+                <li>15-second exposures stack automatically</li>
+            </ul>
+        </article>
+
+        <!-- Article 4 Full -->
+        <article id="article-4" class="full-article">
+            <a href="#" class="back-button">← Back to all articles</a>
+            <h2><a href="https://www.google.com/search?q=Turnkey+Plant+Solutions+pesticide+manufacturing" target="_blank" style="color: var(--primary); text-decoration: none;">Turnkey Plant Solutions: Complete Manufacturing Setup</a></h2>
+            <div class="blog-meta">
+                <span>April 30, 2023</span>
+                <span>10 min read</span>
+                <span class="product-tag">Zen Watch 3</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Zen Watch health metrics">
+            
+            <h3>1. Stress Monitoring</h3>
+            <p>The <strong>HRV sensor</strong> measures:</p>
+            <ul>
+                <li>Real-time stress levels (0-100 scale)</li>
+                <li>Triggers breathing exercises when >70</li>
+            </ul>
+
+            <h3>2. Advanced Sleep Analysis</h3>
+            <p>View in the <strong>Zen Health app</strong>:</p>
+            <ul>
+                <li>REM/deep/light sleep phases</li>
+                <li>Oxygen variation trends</li>
+            </ul>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="INDEX.html" class="logo">
+                        <img src="black logo.png" alt="Ash Engineering Logo" style="height: 84px;">
+                    </a>
+                    <p>"Engineering solutions for a better Tomorrow."</p>
+                    <div class="social-links">
+                        <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                        <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                        <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
+                        <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
+                        <a href="#" onclick="openWhatsAppConsultation()"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="INDEX.html">Home</a></li>
+                        <li><a href="ABOUT.html">About</a></li>
+                        <li><a href="Products_List.html">Products</a></li>
+                        <li><a href="CONTACT_US.html">Contact</a></li>
+                        <li><a href="BLOG.html">Blog</a></li>
+                        <li><a href="FAQs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> <a href="#" onclick="openWhatsAppConsultation()">WhatsApp Us</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+919399086117">+91 9399086117</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+917000074395">+91 7000074395</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+919201663366">+91 9201663366</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info.ashengineering@gmail.com">info.ashengineering@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Block-B, Plot No. 14 Lakhanpuri, Indstrial Area Block Charama, Distt. Kanker(C.G.)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="copyright-container">
+                    <div class="cursor-follower"></div>
+                    <p>© 2024 Ash Engineering. All rights reserved.<br>
+                    <a href="https://yashbiware.github.io/YashBiware-Freelacing/index.html" target="_blank" style="color: var(--secondary); text-decoration: none; font-weight: 600;">
+                        Made with <span class="heart">❤️</span> by <span class="bucksss">Bucksss</span>
+                    </a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openWhatsAppConsultation() {
+            const phoneNumber = "919399086117";
+            const message = "Hello Ash Engineering,\n\nI'm interested in a free consultation about your pesticide manufacturing solutions. Please provide more information.\n\n[Your Name]\n[Your Company]\n[Your Requirements]";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+        
+        // Toggle between grid view and full articles
+        document.querySelectorAll('.blog-card, .read-more').forEach(element => {
+            element.addEventListener('click', (e) => {
+                const articleId = element.closest('.blog-card').getAttribute('data-article');
+                document.getElementById('article-list').style.display = 'none';
+                document.getElementById(articleId).style.display = 'block';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // Back button functionality
+        document.querySelectorAll('.back-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.getElementById('article-list').style.display = 'grid';
+                document.querySelectorAll('.full-article').forEach(article => {
+                    article.style.display = 'none';
+                });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

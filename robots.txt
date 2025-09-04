@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ashengineering.com/sitemap.xml
+
+# Allow crawling of all important pages
+Allow: /INDEX.html
+Allow: /ABOUT.html
+Allow: /Products_List.html
+Allow: /CONTACT_US.html
+Allow: /BLOG.html
+Allow: /FAQs.html
+
+# Allow crawling of all product pages
+Allow: /PRODUCT_1.html
+Allow: /PRODUCT_2.html
+Allow: /PRODUCT_3.html
+Allow: /PRODUCT_4.html
+Allow: /PRODUCT_5.html
+Allow: /PRODUCT_6.html
+Allow: /PRODUCT_7.html
+Allow: /PRODUCT_8.html
+Allow: /PRODUCT_9.html
+Allow: /PRODUCT_10.html
+Allow: /PRODUCT_11.html
+Allow: /PRODUCT_12.html
+
+# Allow images and assets
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.css
+Allow: /*.js
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
